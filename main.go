@@ -419,6 +419,12 @@ func client(args []string) {
 	if *hostname != "" {
 		config.Headers.Set("Host", *hostname)
 	}
+	//
+	authheader := os.Getenv("CHISEL_AUTHHEADER")
+	if authheader != "" {
+		config.Headers.Set("Authorization", authheader)
+	}
+
 	//ready
 	c, err := chclient.NewClient(&config)
 	if err != nil {
