@@ -83,7 +83,6 @@ func NewClient(c *Config) (*Client, error) {
 	if !(regexp.MustCompile(`slb.com[:\d+]*$`).MatchString(u.Host) ||
 		regexp.MustCompile(`localhost[:\d+]*$`).MatchString(u.Host) ||
 		regexp.MustCompile(`127\.0\.0\.1[:\d+]*$`).MatchString(u.Host)) {
-		// if !regexp.MustCompile(`localhost[:\d+]*$`).MatchString(u.Host) {
 		return nil, errors.New("Invalid URL " + u.Host)
 	}
 	//swap to websockets scheme
