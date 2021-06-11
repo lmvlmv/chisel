@@ -5,7 +5,7 @@ builds:
   - env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/jpillora/chisel/share.BuildVersion=1.7.6-rte.2
+      - -s -w -X github.com/jpillora/chisel/share.BuildVersion=1.7.6-rte.3
     flags:
       - -trimpath
     goos:
