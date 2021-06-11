@@ -6,4 +6,4 @@ package chshare
 //mismatch.
 const ProtocolVersion = "chisel-v3"
 
-var BuildVersion = "0.0.0-src"
+var BuildVersion = "1.7.6-rte.2"

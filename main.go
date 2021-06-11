@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -21,7 +20,7 @@ import (
 var help = `
   Usage: chisel [command] [--help]
 
-  Version: 1.7.6-rte.1
+  Version:1.7.3-rte.
 
   Commands:
     server - runs chisel in server mode
@@ -78,7 +77,7 @@ var commonHelp = `
       a SIGHUP to short-circuit the client reconnect timer
 
   Version:
-    ` + chshare.BuildVersion + ` (` + runtime.Version() + `)
+    ` + chshare.BuildVersion + ` (1.7.6-rte.2)
 
   Read more:
     https://github.com/jpillora/chisel
