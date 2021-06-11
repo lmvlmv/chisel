@@ -20,7 +20,7 @@ import (
 var help = `
   Usage: chisel [command] [--help]
 
-  Version:1.7.3-rte.
+  Version:1.7.6-rte.2
 
   Commands:
     server - runs chisel in server mode
