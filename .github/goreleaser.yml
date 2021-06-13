@@ -16,7 +16,7 @@ builds:
     gobinary: garble
     hooks:
       pre: 
-      - go get github.com/lmvlmv/garble@v0.2.0-tiny.2
+      - go get github.com/lmvlmv/garble@v0.2.0-random.0
 archives:
   - format: gz
     files:
