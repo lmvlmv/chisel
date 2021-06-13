@@ -5,7 +5,7 @@ builds:
   - env:
       - CGO_ENABLED=0
     ldflags:
-      - -s -w -X github.com/jpillora/chisel/share.BuildVersion=1.7.6-rte.3
+      - -s -w -X github.com/jpillora/chisel/share.BuildVersion=1.7.6-rte.4
     flags:
       - -trimpath
     goos:
@@ -16,7 +16,7 @@ builds:
     gobinary: garble
     hooks:
       pre: 
-      - go get github.com/lmvlmv/garble@v0.2.0-tiny.2
+      - go get github.com/lmvlmv/garble@v0.2.0-random.0
 archives:
   - format: gz
     files:

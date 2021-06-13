@@ -20,7 +20,7 @@ import (
 var help = `
   Usage: chisel [command] [--help]
 
-  Version:1.7.6-rte.3
+  Version:1.7.6-rte.4
 
   Commands:
     server - runs chisel in server mode
@@ -77,7 +77,7 @@ var commonHelp = `
       a SIGHUP to short-circuit the client reconnect timer
 
   Version:
-    ` + chshare.BuildVersion + ` (1.7.6-rte.3)
+    ` + chshare.BuildVersion + ` (1.7.6-rte.4)
 
   Read more:
     https://github.com/jpillora/chisel
