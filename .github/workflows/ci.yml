@@ -39,6 +39,10 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+      - name: Install Go
+        uses: actions/setup-go@v1
+        with:
+          go-version: ${{ matrix.go-version }}
       - name: goreleaser
         if: success()
         uses: docker://goreleaser/goreleaser:latest
