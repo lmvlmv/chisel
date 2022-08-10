@@ -26,29 +26,10 @@ jobs:
         run: go test -v ./...
         env:
           GODEBUG: x509ignoreCN=0
-  # ================
-  # RELEASE JOB
-  #   runs after a success test
-  #   only runs on push "v*" tag
-  # ================
-  # release:
-  #   name: Release
-  #   needs: test
-  #   # if: startsWith(github.ref, 'refs/tags/v')
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out code
-  #       uses: actions/checkout@v1
-  #     - name: goreleaser
-  #       if: success()
-  #       uses: docker://goreleaser/goreleaser:latest
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         args: release --config .github/goreleaser.yml
 
-  #         jobs:
   goreleaser:
+    needs: test
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       -
