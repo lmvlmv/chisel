@@ -32,6 +32,15 @@ builds:
     gomips:
       - hardfloat
       - softfloat
+  - id: chisel-garble
+    binary: chisel-garble
+    goos:
+      - windows
+    goarch:
+      - amd64
+    ldflags:
+      - ""
+    gobinary: "garble-literals"
 nfpms:
   - maintainer: "https://github.com/{{ .Env.GITHUB_USER }}"
     formats:
