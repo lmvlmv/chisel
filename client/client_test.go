@@ -47,6 +47,7 @@ func TestCustomHeaders(t *testing.T) {
 func TestFallbackLegacyFingerprint(t *testing.T) {
 	config := Config{
 		Fingerprint: "a5:32:92:c6:56:7a:9e:61:26:74:1b:81:a6:f5:1b:44",
+		Server:      "http://localhost:9000",
 	}
 	c, err := NewClient(&config)
 	if err != nil {
@@ -70,6 +71,7 @@ func TestFallbackLegacyFingerprint(t *testing.T) {
 func TestVerifyLegacyFingerprint(t *testing.T) {
 	config := Config{
 		Fingerprint: "a5:32:92:c6:56:7a:9e:61:26:74:1b:81:a6:f5:1b:44",
+		Server:      "http://localhost:9000",
 	}
 	c, err := NewClient(&config)
 	if err != nil {
@@ -93,6 +95,7 @@ func TestVerifyLegacyFingerprint(t *testing.T) {
 func TestVerifyFingerprint(t *testing.T) {
 	config := Config{
 		Fingerprint: "qmrRoo8MIqePv3jC8+wv49gU6uaFgD3FASQx9V8KdmY=",
+		Server:      "http://localhost:9000",
 	}
 	c, err := NewClient(&config)
 	if err != nil {
